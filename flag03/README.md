@@ -10,10 +10,6 @@ Security threat, can replace env variable
 
 `chmod 777 /tmp/echo && export PATH=/tmp:$PATH`
 
-then execute script `./level03`
-
-You are now flag3
-
 Do command `env` and see path went from:
 
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
@@ -21,3 +17,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 to 
 
 PATH=/tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+then execute script `./level03`
+
+You are now flag3
