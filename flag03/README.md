@@ -1,3 +1,5 @@
+https://www.cgsecurity.org/Articles/SecProg/Art1/index-fr.html
+
 https://stackoverflow.com/questions/8304396/what-is-vulnerable-about-this-c-code
 
 https://askubuntu.com/questions/857066/meaning-of-the-access-permissions-rws-and-root-root-of-usr-bin-sudo
