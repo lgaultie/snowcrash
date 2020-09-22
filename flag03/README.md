@@ -10,7 +10,7 @@ Security threat, can replace env variable
 
 `chmod 777 /tmp/echo && export PATH=/tmp:$PATH`
 
-path went from:
+Do command `env` and see path went from:
 
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
