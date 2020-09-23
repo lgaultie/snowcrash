@@ -32,3 +32,5 @@ So when calling env, the shell is going to read PATH variable to see where is th
 then execute script `./level03`
 
 You are now flag3 because you "opened" a new shell with the rights of flag03
+
+`getflag` gives `qi0maab88jeaj46qoumi7maus`
