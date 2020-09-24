@@ -1,0 +1,47 @@
+// WARNING: Variable defined which should be unmapped: var_10h
+// WARNING: [r2ghidra] Failed to match type uid_t * for variable var_40h to Decompiler type: Unknown type identifier
+// uid_t
+// WARNING: [r2ghidra] Var arg_4h is stack pointer based, which is not supported for decompilation.
+
+undefined4 main(undefined4 param_1, int32_t param_2, undefined4 param_3)
+{
+    int32_t iVar1;
+    undefined4 uVar2;
+    undefined4 uVar3;
+    undefined4 uVar4;
+    undefined4 var_40h;
+    int32_t var_3ch;
+    char *pcStack52;
+    char *var_2ch;
+    char *var_28h;
+    int32_t var_24h;
+    int32_t var_20h;
+    int32_t var_1ch;
+    undefined *puStack24;
+    int32_t var_10h;
+    
+    uVar2 = param_3;
+    iVar1 = param_2;
+    // [13] -r-x section size 860 named .text
+    puStack24 = (undefined *)&param_1;
+    var_28h = (char *)strdup(0x80487d4);
+    var_24h = strdup(0x80487d4);
+    if (*(int32_t *)(iVar1 + 4) != 0) {
+        free(var_28h);
+        var_28h = (char *)strdup(*(undefined4 *)(iVar1 + 4));
+        if (*(int32_t *)(iVar1 + 8) != 0) {
+            free(var_24h);
+            var_24h = strdup(*(undefined4 *)(iVar1 + 8));
+        }
+    }
+    uVar3 = getegid();
+    uVar4 = geteuid();
+    setresgid(uVar3, uVar3, uVar3, uVar4);
+    setresuid(uVar4, uVar4, uVar4);
+    pcStack52 = "/usr/bin/php";
+    var_2ch = "/home/user/level06/level06.php";
+    var_20h = 0;
+    execve("/usr/bin/php", &pcStack52, uVar2);
+    return 0;
+}
+
