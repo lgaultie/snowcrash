@@ -34,7 +34,7 @@ int main(int argc, char **argv)
     i = 0;
     while (argv[1][i])
     {
-        ft_putchar(argv[1][i] - 1);
+        ft_putchar(argv[1][i] - i);
         i++;
     }
     ft_putstr("\n");
