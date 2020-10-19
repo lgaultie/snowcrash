@@ -1,3 +1,10 @@
+#include <stdlib.h> 
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 void	ft_putstr(char const *s)
 {
 	int				i;
@@ -26,7 +33,7 @@ int main(int argc, char **argv)
     i = 0;
     while (argv[1][i])
     {
-        ft_putstr(argv[1][i] - 1);
+        ft_putchar(argv[1][i] - 1);
         i++;
     }
     ft_putstr("\n");
