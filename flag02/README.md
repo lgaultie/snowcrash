@@ -22,6 +22,6 @@ We can clearly see someone tried to login and failed, we also see the password, 
 
 Below `Show and save data as` put `Hex Dump`
 
-In hexa F7 stands for 127 in ASCII wich is del, so let's replace the dots by a delete.
+In hexa F7 stands for 127 in ASCII, which is del, so let's replace each dot by a delete.
 
 Found `ft_waNDReL0L`
