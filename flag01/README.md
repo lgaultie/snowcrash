@@ -1,1 +1,1 @@
-Weird file from flag00 is called John, let's use `john the ripper`, found `abcdefg`
+Used `john the ripper` on weird file `john` from flag00, found `abcdefg`
