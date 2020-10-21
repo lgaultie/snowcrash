@@ -1,3 +1,6 @@
+https://askubuntu.com/questions/301787/opening-a-port-for-listening
+
+
 First ssh terminal: `while true; do (./level10 /tmp/final 10.11.200.134); done`
 
 Second ssh terminal: `while true; do nc -l 6969 ;done`
