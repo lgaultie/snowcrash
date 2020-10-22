@@ -1,10 +1,12 @@
+`ls -l` <br/>
+-rwsr-sr-x  1  flag03  level03  8627  Mar  5  2016  level03
+
+`When applied to an executable file, it sets the effective user ID from that of the real user (the user actually running the program) to that of the program's owner. Most often this is given to a few programs owned by the superuser. When an ordinary user runs a program that is "setuid root" , the program runs with the effective privileges of the superuser. This allows the program to access files and directories that an ordinary user would normally be prohibited from accessing. Clearly, because this raises security concerns, the number of setuid programs must be held to an absolute minimum.` <br/>
+https://askubuntu.com/questions/857066/meaning-of-the-access-permissions-rws-and-root-root-of-usr-bin-sudo
+
 https://www.cgsecurity.org/Articles/SecProg/Art1/index-fr.html
 
 https://stackoverflow.com/questions/8304396/what-is-vulnerable-about-this-c-code
-
-https://askubuntu.com/questions/857066/meaning-of-the-access-permissions-rws-and-root-root-of-usr-bin-sudo
-
-File has a weird CHMOD.
 
 Security threat, can replace env variable
 
