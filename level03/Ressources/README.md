@@ -12,7 +12,7 @@ https://askubuntu.com/questions/857066/meaning-of-the-access-permissions-rws-and
 
 So my user ID will go from level03 to flag03 (program's owner) during the execution of level03.
 
-How can I make this program runs getflag ?
+How can I make this program run getflag ?
 
 `./level03` <br/>
 Exploit me
