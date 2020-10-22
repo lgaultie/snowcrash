@@ -29,7 +29,9 @@ sub t {
 # Standard output (stdout) can be screen or file depending on redirection
 # 2>&1 redirect stderr to whatever value is set to stdout
 # output (array) saves what is return on the stdout by the egrep command
-# 
+# The threat must be here as all others line seems safe
+# `` is for running command !
+# however getflag will become GETFLAG and won't work...
   @output = `egrep "^$xx" /tmp/xd 2>&1`;
   foreach $line (@output) {
       ($f, $s) = split(/:/, $line);
