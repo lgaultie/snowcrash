@@ -18,10 +18,10 @@ It seems someone connected somewhere, sent some data and close the connection.
 
 Right click on any package --> `Follow` --> `TCP Stream`<br/>
 In red is the Client part, and in blue the server response. <br/>
-We can clearly see someone tried to login and failed, we also see the password, however it doesn't work as flag02 password. Maybe the dots stands for an unprintable characters.
+We can clearly see someone tried to login and failed, we also see the password, however it doesn't work as flag02 password. Maybe the dots stands for unprintable characters.
 
 Below `Show and save data as` put `Hex Dump`
 
-In hexa F7 stands for 127 in ASCII, which is del, so let's replace each dot by a delete.
+We can see each dot stands for F7. F7 in hexadecimal stands for 127 in ASCII, which is del, so let's replace each dot by a delete.
 
 Found `ft_waNDReL0L`
