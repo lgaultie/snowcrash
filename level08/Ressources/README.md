@@ -19,4 +19,4 @@ We can use symbolic links: </br>
 
 `ln -s ~/token /tmp/non` </br>
 `./level08 /tmp/non` </br>
-gives the token.
+gives `quif5eloekouj29ke0vouxean`
