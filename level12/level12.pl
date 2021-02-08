@@ -20,7 +20,7 @@ sub t {
 # a text of the string with some pattern specified by the user.
 # Syntax: s/text/pattern
 # \s Do a global search for whitespace characters in a string
-# .* just means "0 or more of any character"
+# .* are wildcards it means "0 or more of any character"
 # remove all whitespaces
   $xx =~ s/\s.*//;
 # Variables of Array Datatype are preceded by an “at” (@) sign.
