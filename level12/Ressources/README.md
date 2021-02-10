@@ -14,11 +14,6 @@ https://stackoverflow.com/questions/6697753/difference-between-single-and-double
 https://www.howtogeek.com/howto/29980/whats-the-difference-between-single-and-double-quotes-in-the-bash-shell/
 
 ```
-echo '`getflag` > /tmp/myflag' 
-```
-chmod 777 /tmp/GETFLAG
-
-```
 cat /tmp/GETFLAG
 #!/bin/bash
 getflag > /tmp/mdp
