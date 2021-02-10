@@ -14,14 +14,14 @@ sub t {
 # The tr operator in Perl translates all characters of 
 # SearchList into the corresponding characters of ReplacementList.
 # Syntax: tr/SearchList/ReplacementList/
-# uppercase on x
+# Do uppercase on x !
   $xx =~ tr/a-z/A-Z/;
 # Substitution Operator or ‘s’ operator in Perl is used to substitute 
 # a text of the string with some pattern specified by the user.
 # Syntax: s/text/pattern
 # \s Do a global search for whitespace characters in a string
 # .* just means "0 or more of any character"
-# remove all whitespaces
+# remove all whitespaces !
   $xx =~ s/\s.*//;
 # Variables of Array Datatype are preceded by an “at” (@) sign.
 # egrep command searches for a text pattern, using extended regular expressions 
@@ -31,7 +31,9 @@ sub t {
 # output (array) saves what is return on the stdout by the egrep command
 # The threat must be here as all others line seems safe
 # `` is for running command !
+# grep " " run command inside !
 # however getflag will become GETFLAG and won't work...
+# ^ to find character missing in the string
   @output = `egrep "^$xx" /tmp/xd 2>&1`;
   foreach $line (@output) {
       ($f, $s) = split(/:/, $line);
