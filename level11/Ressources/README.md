@@ -12,8 +12,8 @@ So io.popen starts a program in a separated process and returns a file handle th
 
 So the program level11.lua will execute `echo "..pass.." | sha1sum`. We saw in a previous level that echo with double quote will execute any command which is written like this `$(command)`.
 
-So let's do: </br>
-`nc loclhost 5151`</br>
+So we should listen to the port 5151: </br>
+`nc localhost 5151`</br>
 `Password: $(getflag)`</br>
 don't return the flag.
 
