@@ -1,4 +1,6 @@
-strings
+strings shows us that he programm uses getuid, and expect a user uid of a particular number.
+
+./level13 confirms it.
 
 gdb ./level13
 
