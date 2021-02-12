@@ -1,10 +1,21 @@
-`ls -l` <br/>
-----r--r-- 1 flag02 level02 8302 Aug 30  2015 level02.pcap <br/>
+# Level02
+
+```bash
+level02@SnowCrash:~$ ls -l
+----r--r-- 1 flag02 level02 8302 Aug 30  2015 level02.pcap
+```
+
+### What is a pcap file ?
 
 `PCAP is a valuable resource for file analysis and to monitor your network traffic. Packet collection tools like Wireshark allow you to collect network traffic and translate it into a format that’s human-readable. There are many reasons why PCAP is used to monitor networks. Some of the most common include monitoring bandwidth usage, identifying rogue DHCP servers, detecting malware, DNS resolution, and incident response.`
 https://www.comparitech.com/net-admin/pcap-guide/
 
-Let's use Wireshark to inspect level02.pcap:
+### Inspect level02.pcap
+
+- Used Wireshark to inspect level02.pcap:
+
+# [ TODO MISSING WIRESHARCK SCREENS OF SOMETHINg ] 
+
 
 We can see a SYN connection, lot of PSH/ACK and a closing SYN in the end.<br/>
 `Short for synchronize, SYN is a TCP packet sent to another computer requesting that a connection be established between them. If the SYN is received by the second machine, an SYN/ACK is sent back to the address requested by the SYN. Lastly, if the original computer receives the SYN/ACK, a final ACK is sent.` <br/>
