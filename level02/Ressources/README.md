@@ -16,7 +16,6 @@ Used Wireshark to inspect level02.pcap:
 
 We can see a SYN connection, lot of PSH/ACK and a closing SYN in the end.
 
-------------
 Documentation: 
 `Short for synchronize, SYN is a TCP packet sent to another computer requesting that a connection be established between them. If the SYN is received by the second machine, an SYN/ACK is sent back to the address requested by the SYN. Lastly, if the original computer receives the SYN/ACK, a final ACK is sent.` <br/>
 https://www.computerhope.com/jargon/s/syn.htm
@@ -25,7 +24,6 @@ https://www.quora.com/What-is-the-significance-of-PSH-flag-in-TCP-header
 `ACK means that the machine sending the packet with ACK is acknowledging data that it had received from the other machine. In TCP, once the connection is established, all packets sent by either side will contain an ACK, even if it's just re-acknowledging data that it's already acknowledged.`
 https://osqa-ask.wireshark.org/questions/20423/pshack-wireshark-capture
 
------------
 
 ### Solution
 
