@@ -30,16 +30,21 @@ https://www.perl.com/article/perl-and-cgi/
 2. The print uses \`\` (Backquotes), and any command put between backquotes will be executed.
 https://www.tutorialspoint.com/unix/unix-quoting-mechanisms.htm
 
+How to send a parameter to CGI?
+`The first way to pass data is with the query string, (the portion of a URI beginning with ?), which you see in URLs like https://example.com/?foo=bar. This uses the “GET” request method, and becomes available to the program as $ENV->{QUERY_STRING}, which in this case is foo=bar (CGI programs receive their arguments as environment variables).`
+https://www.perl.com/article/perl-and-cgi/
+
+
+
 ## Solution
 ---------------
 
-Open a web browser, connect to the VM IP address on port 4747, for example: http://10.0.2.15:4747/
-
-`The first way to pass data is with the query string, (the portion of a URI beginning with ?), which you see in URLs like https://example.com/?foo=bar. This uses the “GET” request method, and becomes available to the program as $ENV->{QUERY_STRING}, which in this case is foo=bar (CGI programs receive their arguments as environment variables).`<br/>
-https://www.perl.com/article/perl-and-cgi/
-
-Use the query string to pass the getflag command: </br>
-`http://192.168.1.67:4747/?x=getflag` will not work as it will only print the string getflag </br>
-But \`getflag\` will be taken as command (try print/echo \`getflag\` in terminal for example)
-
-`ne2searoevaevoem4ov4ar8ap` 
+- Steps:
+  - Open a web browser and connect to the VM IP address on port 4747 (for example: http://10.0.2.15:4747/)
+  - Use the query string to pass the getflag command:
+  ``` bash
+  http://192.168.1.67:4747/?x=getflag
+  ```
+  We need to send \`getflag\` so that it will be executed (try echo \`getflag\` in terminal for example). `getflag` as a parameter will only print getflag.
+ 
+Here we can found the token.
