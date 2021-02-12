@@ -14,7 +14,7 @@ https://www.comparitech.com/net-admin/pcap-guide/
 
 **Let's inspect level02.pcap**
 
-First, retrieve the file to your computer.
+First, retrieve the file to your computer. </br>
 `scp -P 4242 level02@[SnowCrashIPAddress]:~/level02.pcap ex02`
 
 If we use Wireshark to inspect `level02.pcap`, we can see a SYN connection, lot of PSH/ACK and a closing SYN in the end.
