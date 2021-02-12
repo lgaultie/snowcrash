@@ -8,7 +8,7 @@ flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
 ```
 Flag01 password is in clear but can be encrypted same ways as level00.
 
-Let's install john the ripper on a personal computer, then use it on the password.
+Let's install `john the ripper` on a personal computer, then use it on the password.
 ```bash
 echo '42hDRfypTqqnw' > etc_passwd
 john etc_passwd
