@@ -42,7 +42,7 @@ https://www.perl.com/article/perl-and-cgi/
 Steps:
   - Open a web browser and connect to the VM IP address on port 4747
   ```BASH
-  http://10.0.2.15:4747/
+  http://[Snowcrash_VM_address]:4747/
   ```
   - Use the query string to pass the getflag command. We need to send \`getflag\` so that it will be executed (try echo \`getflag\` in terminal for example). `getflag` as a parameter will only print getflag.
   ``` bash
