@@ -39,7 +39,7 @@ https://www.perl.com/article/perl-and-cgi/
 ## Solution
 ---------------
 
-- Steps:
+Steps:
   - Open a web browser and connect to the VM IP address on port 4747 (for example: http://10.0.2.15:4747/)
   - Use the query string to pass the getflag command:
   ``` bash
