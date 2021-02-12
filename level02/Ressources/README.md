@@ -29,7 +29,7 @@ https://osqa-ask.wireshark.org/questions/20423/pshack-wireshark-capture
 
 It seems someone connected somewhere, sent some data and close the connection.
 
-Right click on any package --> `Follow` --> `TCP Stream`<br/>
+On Wireshark, right click on any package --> `Follow` --> `TCP Stream`<br/>
 In red is the Client part, and in blue the server response. <br/>
 We can clearly see someone tried to login and failed, we also see the password, however it doesn't work as flag02 password. Maybe the dots stands for unprintable characters.
 
