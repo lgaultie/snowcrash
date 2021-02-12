@@ -46,7 +46,7 @@ Steps:
   ```
   - Use the query string to pass the getflag command. We need to send \`getflag\` so that it will be executed (try echo \`getflag\` in terminal for example). `getflag` as a parameter will only print getflag.
   ``` bash
-  http://192.168.1.67:4747/?x=`getflag`
+  http://[Snowcrash_VM_address]:4747/?x=`getflag`
   ```
 
  
