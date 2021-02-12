@@ -22,7 +22,7 @@ https://en.wikipedia.org/wiki/Logname
 ## Solution
 ---------------
 
-We can modify this variable to ```'`getflag`'``` so it will be taken as ````getflag```` in the env variable, and then level07 will execute what is in backquotes.</br>
+We can modify this variable to ```'`getflag`'``` so it will be taken as ``` `getflag` ``` in the env variable, and then level07 will execute what is in backquotes.</br>
 https://book.hacktricks.xyz/pentesting-web/command-injection
 
 ```bash
