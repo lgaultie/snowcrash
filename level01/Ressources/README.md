@@ -10,8 +10,8 @@ Flag01 password is in clear but can be encrypted same ways as level00.
 
 Let's install `john the ripper` on a personal computer, then use it on the password.
 ```bash
-echo '42hDRfypTqqnw' > etc_passwd
-john etc_passwd
+bash-3.2$ echo '42hDRfypTqqnw' > etc_passwd
+bash-3.2$ john etc_passwd
 Loaded 1 password hash (descrypt, traditional crypt(3) [DES 128/128 SSE2])
 Press 'q' or Ctrl-C to abort, almost any other key for status
 abcdefg          (?)
