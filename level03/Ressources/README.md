@@ -47,7 +47,7 @@ If we make a fake echo function, then change the path so that it finds our echo 
 
   - Make a fake echo function
       ```bash
-      echo "/bin/bash" > /tmp/echo
+      echo '/bin/bash' > /tmp/echo
       ```
       This will create a fake echo that will execute /bin/bash, that is a new connection to our shell with the current user's permission.
       
