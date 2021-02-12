@@ -1,7 +1,6 @@
 # Level04
 
 ## Research
----------------
 
 ```bash
 level04@SnowCrash:~$ ls -l
@@ -37,7 +36,6 @@ https://www.perl.com/article/perl-and-cgi/
 
 
 ## Solution
----------------
 
 Steps:
   - Open a web browser and connect to the VM IP address on port 4747
