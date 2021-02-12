@@ -56,17 +56,22 @@ If we make a fake echo function, then change the path so that it finds our echo 
       ```
       
   - Change path
+      ```bash
+      level03@SnowCrash:~$ env
+      [...]
+      PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+      [...]
+      ```
       ``` bash
       export PATH=/tmp:$PATH
       ```
+      ```bash
+      level03@SnowCrash:~$ env
+      [...]
+      PATH=/tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+      [...]
+      ```
       We added tmp directory at the start of the path.
-
-
-
-Do command `env` and see path went from: <br/>
-`PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games`<br/>
-to <br/>
-`PATH=/tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games`
 
 
 ```bash
