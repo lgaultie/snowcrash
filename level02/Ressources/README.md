@@ -7,8 +7,6 @@ level02@SnowCrash:~$ ls -l
 
 ## Research
 
--------------------
-
 - What is a PCAP file?
 `PCAP is a valuable resource for file analysis and to monitor your network traffic. Packet collection tools like Wireshark allow you to collect network traffic and translate it into a format that’s human-readable. There are many reasons why PCAP is used to monitor networks. Some of the most common include monitoring bandwidth usage, identifying rogue DHCP servers, detecting malware, DNS resolution, and incident response.`
 https://www.comparitech.com/net-admin/pcap-guide/
@@ -29,8 +27,6 @@ https://osqa-ask.wireshark.org/questions/20423/pshack-wireshark-capture
 
 
 ## Solution
-
-------------------
 
 It seems someone connected somewhere, sent some data and close the connection.
 
