@@ -31,7 +31,8 @@ level03@SnowCrash:~$ strings level03
 [...]
 ```
 
-We can see the program calls the echo function. The ENV utility will invoke the first sh or bash executable found in the user's $PATH.<br/>
+We can see the program calls the echo function.</br>
+The ENV utility will invoke the first sh or bash executable found in the user's $PATH.<br/>
 `The PATH environment variable is a colon-delimited list of directories that your shell searches through when you enter a command.`<br/>
 https://stackoverflow.com/questions/8304396/what-is-vulnerable-about-this-c-code <br/>
 https://stackoverflow.com/questions/43793040/how-does-usr-bin-env-work-in-a-linux-shebang-line
