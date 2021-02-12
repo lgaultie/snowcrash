@@ -80,7 +80,7 @@ level03@SnowCrash:~$ ./level03
 
 You are now flag3 because you "opened" a new shell with the rights of flag03.
 
-You can now launch `getflag`.
+You can now launch `getflag` with flag03 rights.
 
 https://www.cgsecurity.org/Articles/SecProg/Art1/index-fr.html
 
