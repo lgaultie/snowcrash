@@ -18,10 +18,10 @@ If we use Wireshark to inspect `level02.pcap`, we can see a SYN connection, lot 
 
 Documentation: 
 `Short for synchronize, SYN is a TCP packet sent to another computer requesting that a connection be established between them. If the SYN is received by the second machine, an SYN/ACK is sent back to the address requested by the SYN. Lastly, if the original computer receives the SYN/ACK, a final ACK is sent.` <br/>
-https://www.computerhope.com/jargon/s/syn.htm
-`PSH or PUSH flag is an option provided by TCP that allows the sending application to start sending the data even when the buffer is not full`
-https://www.quora.com/What-is-the-significance-of-PSH-flag-in-TCP-header
-`ACK means that the machine sending the packet with ACK is acknowledging data that it had received from the other machine. In TCP, once the connection is established, all packets sent by either side will contain an ACK, even if it's just re-acknowledging data that it's already acknowledged.`
+https://www.computerhope.com/jargon/s/syn.htm<br/>
+`PSH or PUSH flag is an option provided by TCP that allows the sending application to start sending the data even when the buffer is not full`<br/>
+https://www.quora.com/What-is-the-significance-of-PSH-flag-in-TCP-header<br/>
+`ACK means that the machine sending the packet with ACK is acknowledging data that it had received from the other machine. In TCP, once the connection is established, all packets sent by either side will contain an ACK, even if it's just re-acknowledging data that it's already acknowledged.`<br/>
 https://osqa-ask.wireshark.org/questions/20423/pshack-wireshark-capture
 
 
