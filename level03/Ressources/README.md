@@ -78,7 +78,7 @@ If we make a fake echo function, then change the path so that it finds our echo 
 level03@SnowCrash:~$ ./level03
 ```
 
-You are now flag3 because you "opened" a new shell with the rights of flag03.
+You are now `flag03` as a user, because you "opened" a new shell with the rights of flag03.
 
 You can now launch `getflag` with flag03 rights.
 
