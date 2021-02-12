@@ -26,7 +26,7 @@ We can modify this variable to ```'`getflag`'``` so it will be taken as ``` `get
 https://book.hacktricks.xyz/pentesting-web/command-injection
 
 ```bash
-level07@SnowCrash:~$ export LOGNAME=\`getflag\`
+level07@SnowCrash:~$ export LOGNAME='\`getflag\`'
 level07@SnowCrash:~$ ./level07
 ```
 Gives the token.
