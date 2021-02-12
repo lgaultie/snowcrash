@@ -1,5 +1,8 @@
 # Level04
 
+## Research
+---------------
+
 ```bash
 level04@SnowCrash:~$ ls -l
 -rwsr-s-r-x 1 flag04 level04 152 Mar 5 2016 level04.pl
@@ -27,6 +30,8 @@ https://www.perl.com/article/perl-and-cgi/
 2. The print uses \`\` (Backquotes), and any command put between backquotes will be executed.
 https://www.tutorialspoint.com/unix/unix-quoting-mechanisms.htm
 
+## Solution
+---------------
 
 Open a web browser, connect to the VM IP address on port 4747, for example: http://10.0.2.15:4747/
 
