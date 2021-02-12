@@ -22,7 +22,7 @@ https://en.wikipedia.org/wiki/Logname
 ## Solution
 ---------------
 
-We can modify this variable to `getflag` </br>
+We can modify this variable to `getflag` between backquotes, so it will be executed.</br>
 https://book.hacktricks.xyz/pentesting-web/command-injection
 
 ```bash
