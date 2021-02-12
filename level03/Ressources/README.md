@@ -1,7 +1,6 @@
 # Level03
 
 ## Research
-------------
 
 ```bash
 level03@SnowCrash:~$ ls -l
@@ -39,7 +38,7 @@ https://stackoverflow.com/questions/43793040/how-does-usr-bin-env-work-in-a-linu
 
 
 ## Solution
------------
+
 
 If we make a fake echo function, then change the path so that it finds our echo first instead of the real one, tt will run it as flag03.
 
