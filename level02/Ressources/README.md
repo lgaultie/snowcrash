@@ -12,11 +12,9 @@ level02@SnowCrash:~$ ls -l
 `PCAP is a valuable resource for file analysis and to monitor your network traffic. Packet collection tools like Wireshark allow you to collect network traffic and translate it into a format that’s human-readable. There are many reasons why PCAP is used to monitor networks. Some of the most common include monitoring bandwidth usage, identifying rogue DHCP servers, detecting malware, DNS resolution, and incident response.`
 https://www.comparitech.com/net-admin/pcap-guide/
 
-**Inspect level02.pcap**
+**Let's inspect level02.pcap**
 
-Used Wireshark to inspect level02.pcap:
-
-We can see a SYN connection, lot of PSH/ACK and a closing SYN in the end.
+If we use Wireshark to inspect `level02.pcap`, we can see a SYN connection, lot of PSH/ACK and a closing SYN in the end.
 
 Documentation: 
 `Short for synchronize, SYN is a TCP packet sent to another computer requesting that a connection be established between them. If the SYN is received by the second machine, an SYN/ACK is sent back to the address requested by the SYN. Lastly, if the original computer receives the SYN/ACK, a final ACK is sent.` <br/>
@@ -39,4 +37,4 @@ Below, click on `Show and save data as` and put `Hex Dump`.
 
 We can see each dot stands for F7 which in hexadecimal stands for 127 in ASCII, meaning the character `DEL`, so let's replace each dot by a delete.
 
-Found `ft_waNDReL0L`
+Found `ft_waNDReL0L` that we can use to connect to flag02 and launch `getflag`.
