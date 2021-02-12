@@ -19,8 +19,8 @@ We can see a SYN connection, lot of PSH/ACK and a closing SYN in the end.<br/>
 https://www.computerhope.com/jargon/s/syn.htm
 
 `PSH or PUSH flag is an option provided by TCP that allows the sending application to start sending the data even when the buffer is not full`
-
 `ACK means that the machine sending the packet with ACK is acknowledging data that it had received from the other machine. In TCP, once the connection is established, all packets sent by either side will contain an ACK, even if it's just re-acknowledging data that it's already acknowledged.`
+https://osqa-ask.wireshark.org/questions/20423/pshack-wireshark-capture
 
 It seems someone connected somewhere, sent some data and close the connection.
 
