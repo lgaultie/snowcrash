@@ -23,10 +23,7 @@ Found lot of files, with 2 weird ones:
 
 - The `/usr/sbin/john` file seems encrypted. Let's decrypt it.
 
-As the file is called John, tried tool `John the Ripper` and found `abcdefg`<br/>
-Couldn't connect to flag00 but could connect to flag01, it is next level password!
-
-Go back to the basic of cryptography: used Ceasar cipher
+Let's try the basic of cryptography: used Ceasar cipher
 https://www.dcode.fr/chiffre-cesar
 
 Found `nottoohardhere`
