@@ -40,7 +40,7 @@ level05@SnowCrash:/usr/sbin$ ./openarenaserver
 bash: ./openarenaserver: Permission denied
 ```
 We don't have rights to execute `openarenaserver`.
-However the files I created to test stuff in `/opt/openarenaserver/` disappeared after a while, maybe `openarenaserver` is **launched by a cronjob** or something.
+However the files I created to test stuff in `/opt/openarenaserver/` disappeared after a while, maybe `openarenaserver` is launched by a cronjob or something.
 
 ```bash
 level05@SnowCrash:~$ echo 'getflag' > /opt/openarenaserver/getflag
