@@ -77,6 +77,8 @@ If we `cat level06.php` the file is hard to read, so I re-wrote it and study it:
     print $r;
 ?>
 ```
+
+Security concern about the `/e` modifier of `preg_repace()` :
 `As /e evaluates arbitrary PHP code it can easily be exploited if user input is not carefully validated or sanitized.
 For example the above example can be used to execute arbitrary PHP code by passing the string <h1>{${eval($_GET[php_code])}}</h1>. The evaluted code in this case would be "<h1>" . strtoupper("{${eval($_GET[php_code])}}") . "</h1>" and as such execute any PHP code passed in the php_code GET variable. ` </br>
 https://wiki.php.net/rfc/remove_preg_replace_eval_modifier
