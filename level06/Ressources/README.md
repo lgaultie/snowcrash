@@ -12,7 +12,19 @@ total 12
 ```bash
 level06@SnowCrash:~$ ./level06
 PHP Warning:  file_get_contents(): Filename cannot be empty in /home/user/level06/level06.php on line 4
+level06@SnowCrash:~$ ./level06.php
+PHP Notice:  Undefined offset: 1 in /home/user/level06/level06.php on line 5
+PHP Notice:  Undefined offset: 2 in /home/user/level06/level06.php on line 5
+PHP Warning:  file_get_contents(): Filename cannot be empty in /home/user/level06/level06.php on line 4
 ```
+```bash
+level06@SnowCrash:~$ strings level06
+[...]
+/usr/bin/php
+/home/user/level06/level06.php
+[...]
+```
+Maybe `level06` executes `level06.php`.
 
 If we `cat level06.php` the file is hard to read, so I re-wrote it and study it: 
 ```php
