@@ -106,6 +106,7 @@ and a lot of variants of it...
 ## Solution 
 
 Let's find the good syntax:</br>
+https://wiki.php.net/rfc/remove_preg_replace_eval_modifier</br>
 https://www.php.net/manual/fr/language.types.string.php</br>
 https://www.voidsecurity.in/2012/12/exploit-exercise-php-pregreplace.html</br>
 https://www.php.net/manual/fr/language.types.string.php#language.types.string.parsing.complex 
