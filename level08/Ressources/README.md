@@ -52,7 +52,7 @@ level08@SnowCrash:~$ ln -s ~/token /tmp/link
 level08@SnowCrash:~$ ./level08 /tmp/link
 quif5eloekouj29ke0vouxean
 ```
-And then connect to level09
+And then connect to flag08 using `quif5eloekouj29ke0vouxean`
 ```bash
 level08@SnowCrash:~$ su flag08
 Password:
