@@ -6,7 +6,10 @@
 level12@SnowCrash:~$ ls -l
 total 4
 -rwsr-sr-x+ 1 flag12 level12 464 Mar  5  2016 level12.pl
-level12@SnowCrash:~$ cat level12.pl
+level12@SnowCrash:~$ ./level12.pl
+Content-type: text/html
+
+..level12@SnowCrash:~$ cat level12.pl
 #!/usr/bin/env perl
 # localhost:4646
 use CGI qw{param};
