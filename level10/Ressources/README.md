@@ -33,7 +33,7 @@ You don't have access to %s
 ```
 The progam seems to send a file to a host on its port 6969, once it is sent, it opens it, reads it, and write it.
 
-We don't have permission to `cat token`, so maybe we can send token with level10 program on a host and read it once level10 wrote token.
+We don't have permission to `cat token`, so maybe we can send token with `level10` program on a host, listen to the host's `6969` port and read the token once `level10` write it.
 
 How do we do that?
 
