@@ -95,7 +95,7 @@ Fails, remembered previous level `netcat` command.
 
 ## Solution
 
-Let's listen to our `localhost` port `5151`:
+Let's connect to our `localhost` port `5151`:
 ```bash
 level11@SnowCrash:~$ nc localhost 5151
 Password: $(getflag)
