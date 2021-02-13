@@ -8,7 +8,7 @@ total 4
 -rwsr-sr-x 1 flag11 level11 668 Mar  5  2016 level11.lua
 ```
 
-Study level11.lua:
+Study `level11.lua`:
 ```lua
 #!/usr/bin/env lua
 local socket = require("socket")
@@ -25,8 +25,7 @@ function hash(pass)
   -- through standard pipes (stdin, stdout)
   -- starts program prog in a separated process and returns a file handle that you 
   -- can use to read data from this program (if mode is "r", the default) or to write 
-  -- data to this program (if mode is "w").
-  -- sha1sum : 
+  -- data to this program (if mode is "w"). 
   -- sha1sum is a computer program that calculates and verifies SHA-1 hashes. t print or check 
   -- SHA1 (160-bit) checksums. With no FILE, or when FILE is -, read standard input. 
   -- A checksum (or hash) is a sequence of numbers and letters used to check data for errors. If you know the checksum
@@ -53,11 +52,9 @@ while 1 do
       print("trying " .. l)
       --   sends client's attempted password to hash function
       local h = hash(l)
-      -- the hash we are looking for is this one (~= stands for !=)
       if h ~= "f05d1d066fb246efe0c6f7d095f909a7a0cf34a0" then
           client:send("Erf nope..\n");
       else
-          -- you dumb because idk
           client:send("Gz you dumb*\n")
       end
   end
