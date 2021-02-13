@@ -101,9 +101,9 @@ level11@SnowCrash:~$ nc localhost 5151
 Password: $(getflag)
 Erf nope..
 ```
-don't return the flag.
+don't return the flag, it will pipe into shasum, etc...
 
-Maybe on a different file: 
+So let's redirect getflag to a file:
 ```bash
 level11@SnowCrash:~$ nc localhost 5151
 Password: $(getflag) > tmp/flag
