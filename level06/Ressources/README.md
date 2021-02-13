@@ -1,23 +1,20 @@
-`ls -l` </br>
-gives </br>
-`-rwsr-x---+ 1 flag06 level06 7503 Aug 30  2015 level06`    </br>
-`-rwxr-x---  1 flag06 level06  356 Mar  5  2016 level06.php`</br>
+# Level06
 
-`./level06`</br>
-PHP Warning:  file_get_contents(): Filename cannot be empty in /home/user/level06/level06.php on line 4</br>
-level06 seems to be executing level06.php
+## Research
 
-`./level06.php` </br>
-PHP Notice:  Undefined offset: 1 in /home/user/level06/level06.php on line 5</br>
-PHP Notice:  Undefined offset: 2 in /home/user/level06/level06.php on line 5</br>
-PHP Warning:  file_get_contents(): Filename cannot be empty in /home/user/level06/level06.php on line 4</br>
+```bash
+level06@SnowCrash:~$ ls -l
+total 12
+-rwsr-x---+ 1 flag06 level06 7503 Aug 30  2015 level06
+-rwxr-x---  1 flag06 level06  356 Mar  5  2016 level06.php
+```
 
+```bash
+level06@SnowCrash:~$ ./level06
+PHP Warning:  file_get_contents(): Filename cannot be empty in /home/user/level06/level06.php on line 4
+```
 
-`./level06 hello` </br>
-PHP Warning:  file_get_contents(hello): failed to open stream: No such file or directory in /home/user/level06/level06.php on line 4</br>
-We seems to need a file as argument.
-
-
+If we `cat level06.php` the file is hard to read, so I re-wrote it and study it: 
 ```php
 #!/usr/bin/php
 <?php
@@ -68,6 +65,20 @@ We seems to need a file as argument.
     print $r;
 ?>
 ```
+
+
+`level06` seems to be executing `level06.php`
+
+`./level06.php` </br>
+PHP Notice:  Undefined offset: 1 in /home/user/level06/level06.php on line 5</br>
+PHP Notice:  Undefined offset: 2 in /home/user/level06/level06.php on line 5</br>
+PHP Warning:  file_get_contents(): Filename cannot be empty in /home/user/level06/level06.php on line 4</br>
+
+
+`./level06 hello` </br>
+PHP Warning:  file_get_contents(hello): failed to open stream: No such file or directory in /home/user/level06/level06.php on line 4</br>
+We seems to need a file as argument.
+
 
 https://www.yeahhub.com/code-execution-preg_replace-php-function-exploitation/ </br>
 https://www.php.net/manual/en/language.types.string.php </br>
