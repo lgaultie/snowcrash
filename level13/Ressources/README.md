@@ -33,7 +33,9 @@ The programm does a `getuid` (verified with `strings` command) and then compare 
 
 Maybe we can change the value of `%eax`. 
 
-Let's place a breakpoint at `0x0804859a` to stop the porgram just before the comparison.
+## Solution
+
+Let's place a breakpoint at `0x0804859a` to stop the program just before the comparison.
 ```bash
 (gdb) b *0x0804859a
 Breakpoint 1 at 0x804859a
@@ -43,7 +45,10 @@ Starting program: /home/user/level13/level13
 Breakpoint 1, 0x0804859a in main ()
 (gdb) info registers
 eax            0x7dd	2013
-[...]
+```
+We can see that `%eax` is equal to our user uid. Let's change it with `set` and do `next`:
+
+```
 (gdb) set $eax = 4242
 (gdb) n
 Single stepping until exit from function main,
