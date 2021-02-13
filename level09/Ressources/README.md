@@ -76,3 +76,9 @@ cat: token: Permission denied
 ➜  ex09 ./a.out $(cat token)
 f3iji1ju5yuevaus41q1afiuq
 ```
+We can now connect to `flag09` on the VM:
+```bash
+level09@SnowCrash:~$ su flag09
+Password:
+Don't forget to launch getflag !
+```
