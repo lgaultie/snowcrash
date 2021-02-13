@@ -87,12 +87,12 @@ Theorical steps:
 - Create a file with a syntax matching the regex
 - So a part of the string (the second group) can be sent to function y
 - In function y the string will be transformed (or not) then returned
-- The returned string will be executed by the e modifier
+- The returned string will be executed by the e modifier</br>
 https://www.yeahhub.com/code-execution-preg_replace-php-function-exploitation/ </br>
 https://www.php.net/manual/en/language.types.string.php </br>
 
-In reality: </br>
-Struggled **a lot** to find good syntax, tried: </br>
+In reality:
+- Struggled **a lot** to find good syntax, tried: </br>
 `echo '[x $(getflag)]' > /tmp/flag && ./level06 /tmp/flag` </br>
 `echo '[x ${system(getflag)}]' > /tmp/flag && ./level06 /tmp/flag` </br>
 and a lot of variants of it...
