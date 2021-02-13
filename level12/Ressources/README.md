@@ -35,7 +35,8 @@ sub n {
   }
 }
 
-n(t(param("x"), param("y")));```
+n(t(param("x"), param("y")));
+```
 
 
 level12.l uses CGI on localhost:4646, it seems to take 2 arguments. Argument x will be put in uppercase and will be executed thanks to the \`\` quotes. Argument y seems to be useless for our purpose.
