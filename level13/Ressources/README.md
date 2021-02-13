@@ -48,7 +48,7 @@ eax            0x7dd	2013
 ```
 We can see that `%eax` is equal to our user uid. Let's change it with `set` and do `next`:
 
-```
+```bash
 (gdb) set $eax = 4242
 (gdb) n
 Single stepping until exit from function main,
