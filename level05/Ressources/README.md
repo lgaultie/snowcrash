@@ -18,7 +18,6 @@ level05@SnowCrash:~$ cd /usr/sbin && ls -l openarenaserver
 ```
 
 The file has ACLs extended permissions. We can do `getfacl openarenaserver` to see them.</br>
-But it doesn't seems to be helpful here.
 
 ```bash
 level05@SnowCrash:/usr/sbin$ cat openarenaserver
