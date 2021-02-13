@@ -42,14 +42,14 @@ We don't have rights to execute `openarenaserver`.
 However the files I created to test stuff in `/opt/openarenaserver/` disappeared after a while, maybe `openarenaserver` is **launched by a cronjob** or something.
 
 ```bash
-level05@SnowCrash:~$ echo "getflag" > /opt/openarenaserver/getflag
+level05@SnowCrash:~$ echo 'getflag' > /opt/openarenaserver/getflag
 ```
 And waiting a bit of time for the program to be launch didn't do anything. Maybe redirect the output somewhere can work.
 
 ## Solution
 
 ```bash
-level05@SnowCrash:~$ echo "getflag > /tmp/flag" > /opt/openarenaserver/getflag
+level05@SnowCrash:~$ echo 'getflag > /tmp/flag' > /opt/openarenaserver/getflag
 ```
 Wait a bit...
 ```bash
