@@ -91,7 +91,7 @@ So we have to send `$(getflag)` as a password to the program. How to connect on 
 level11@SnowCrash:~$ curl http://localhost:5151
 Password: Erf nope..
 ```
-Fails, remembered previous level `netcat`command.
+Fails, remembered previous level `netcat` command.
 
 ## Solution
 
