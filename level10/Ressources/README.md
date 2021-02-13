@@ -1,6 +1,37 @@
 # Research 
 
-If we do `strings level10` we can see that the progam seems to send a file to a host on its port 6969, once it is sent, it opens it, reads it, and write it.
+```bash
+level10@SnowCrash:~$ ls -l
+total 16
+-rwsr-sr-x+ 1 flag10 level10 10817 Mar  5  2016 level10
+-rw-------  1 flag10 flag10     26 Mar  5  2016 token
+level10@SnowCrash:~$ cat token
+cat: token: Permission denied
+level10@SnowCrash:~$ ./level10
+./level10 file host
+	sends file to host if you have access to it
+level10@SnowCrash:~$ ./level10 token localhost
+You don't have access to token
+```
+
+```bash
+level10@SnowCrash:~$ strings level10
+[...]
+%s file host
+	sends file to host if you have access to it
+Connecting to %s:6969 ..
+Unable to connect to host %s
+.*( )*.
+Unable to write banner to host %s
+Connected!
+Sending file ..
+Damn. Unable to open file
+Unable to read from file: %s
+wrote file!
+You don't have access to %s
+[...]
+```
+The progam seems to send a file to a host on its port 6969, once it is sent, it opens it, reads it, and write it.
 
 We don't have permission to `cat token`, so maybe we can send token with level10 program on a host and read it once level10 wrote token.
 
