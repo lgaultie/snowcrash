@@ -50,7 +50,9 @@ And waiting a bit of time for the program to be launch didn't do anything. Maybe
 
 ```bash
 level05@SnowCrash:~$ echo "getflag > /tmp/flag" > /opt/openarenaserver/getflag
-[... Wait a bit of time here...]
-level05@SnowCrash:~$ cat /tmp/prout
+```
+Wait a bit...
+```bash
+level05@SnowCrash:~$ cat /tmp/flag
 ```
 Give us the flag
