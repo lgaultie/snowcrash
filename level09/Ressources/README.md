@@ -69,7 +69,7 @@ int main(int argc, char **argv)
 
 ```bash
 ➜  ex09 scp -P 4242 level09@[SnowCrash_VM_IP_address]:~/token .
-ex09 gcc decrypt.c
+➜  ex09 gcc decrypt.c
 ➜  ex09 ./a.out $(cat token)
 cat: token: Permission denied
 ➜  ex09 chmod 777 token
