@@ -77,6 +77,11 @@ If we `cat level06.php` the file is hard to read, so I re-wrote it and study it:
     print $r;
 ?>
 ```
+`As /e evaluates arbitrary PHP code it can easily be exploited if user input is not carefully validated or sanitized.
+For example the above example can be used to execute arbitrary PHP code by passing the string <h1>{${eval($_GET[php_code])}}</h1>. The evaluted code in this case would be "<h1>" . strtoupper("{${eval($_GET[php_code])}}") . "</h1>" and as such execute any PHP code passed in the php_code GET variable. ` </br>
+https://wiki.php.net/rfc/remove_preg_replace_eval_modifier
+
+
 ```bash
 level06@SnowCrash:~$ ./level06 hello
 PHP Warning:  file_get_contents(hello): failed to open stream: No such file or directory in /home/user/level06/level06.php on line 4
@@ -89,7 +94,6 @@ Theorical steps:
 - In function y the string will be transformed (or not) then returned
 - The returned string will be executed by the e modifier</br>
 https://www.yeahhub.com/code-execution-preg_replace-php-function-exploitation/ </br>
-https://www.php.net/manual/en/language.types.string.php </br>
 
 In reality:
 - Struggled **a lot** to find good syntax, tried: </br>
