@@ -42,7 +42,36 @@ level09@SnowCrash:~$ ./level09 }}}}
 ```
 ## Solution
 
-Wrote a programm to remove the shift on the result of `cat token` 
+Wrote a programm to remove the shift on the result of `cat token`
 
-found: 
+```c
+#include <unistd.h>
+#include <stdio.h>
 
+int main(int argc, char **argv)
+{
+    int i;
+
+    if (argc != 2)
+    {
+        return -1;
+    }
+    i = 0;
+    while (argv[1][i] != '\0')
+    {
+        printf("%c", (argv[1][i] - i));
+        i++;
+    }
+    printf("\n");
+    return 0;
+}
+```
+
+```bash
+ex09 gcc decrypt.c
+➜  ex09 ./a.out $(cat token)
+cat: token: Permission denied
+➜  ex09 chmod 777 token
+➜  ex09 ./a.out $(cat token)
+f3iji1ju5yuevaus41q1afiuq
+```
