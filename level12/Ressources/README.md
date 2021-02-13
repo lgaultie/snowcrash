@@ -93,9 +93,9 @@ Nope there is no token here for you sorry. Try again :)
 ```
 This does not work, it launch getflag without the appropriate rights.
 
-1h30 later with lot of different useless tries...
-It was not the good quotes, and why not do the > part into the script.
-https://stackoverflow.com/questions/6697753/difference-between-single-and-double-quotes-in-bash
+1h30 later with lot of different useless tries...</br>
+It was not the good quotes, and why not do the > part into the script.</br>
+https://stackoverflow.com/questions/6697753/difference-between-single-and-double-quotes-in-bash </br>
 https://www.howtogeek.com/howto/29980/whats-the-difference-between-single-and-double-quotes-in-the-bash-shell/
 
 ## Solution
