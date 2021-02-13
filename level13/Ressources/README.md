@@ -33,6 +33,11 @@ The programm does a `getuid` (verified with `strings` command) and then compare 
 
 Maybe we can change the value of `%eax`. 
 
+https://sourceware.org/gdb/current/onlinedocs/gdb/Assignment.html</br>
+https://condor.depaul.edu/glancast/373class/docs/gdb.html </br>
+https://stackoverflow.com/questions/3305164/how-to-modify-memory-contents-using-gdb </br>
+https://ftp.gnu.org/old-gnu/Manuals/gdb/html_node/gdb_109.html
+
 ## Solution
 
 Let's place a breakpoint at `0x0804859a` to stop the program just before the comparison.
@@ -56,6 +61,3 @@ which has no line number information.
 your token is XXXXXXXXXXXXXXXXXXXXXXXX
 0xb7e454d3 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
 ```
- 
- https://condor.depaul.edu/glancast/373class/docs/gdb.html </br>
-https://ftp.gnu.org/old-gnu/Manuals/gdb/html_node/gdb_109.html
