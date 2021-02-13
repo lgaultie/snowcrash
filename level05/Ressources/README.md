@@ -31,8 +31,9 @@ done
 For each file in `/opt/openarenaserver/` it will execute it then supress it.
 
 `Invoking a Bash shell with the -x option causes each shell command to be printed before it is executed.` </br>
-https://docs.actian.com/vector/4.2/index.html#page/SysAdmin/Bash_Shell_-x_Option.htm
-`ulimit: user limits - limit the use of system-wide resources. -t The maximum amount of cpu time in seconds.`
+https://docs.actian.com/vector/4.2/index.html#page/SysAdmin/Bash_Shell_-x_Option.htm</br>
+`ulimit: user limits - limit the use of system-wide resources. -t The maximum amount of cpu time in seconds.`</br>
+https://ss64.com/bash/ulimit.html
 
 ```bash
 level05@SnowCrash:/usr/sbin$ ./openarenaserver
