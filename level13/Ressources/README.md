@@ -57,3 +57,5 @@ your token is XXXXXXXXXXXXXXXXXXXXXXXX
 0xb7e454d3 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
 ```
  
+ https://condor.depaul.edu/glancast/373class/docs/gdb.html
+https://ftp.gnu.org/old-gnu/Manuals/gdb/html_node/gdb_109.html
